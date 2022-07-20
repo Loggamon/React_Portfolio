@@ -5,6 +5,9 @@ function Navigation({ currentPage, handlePageChange }) {
   return (
     <Wrap>
       <WrapItem>
+      <h1>Logan Monson</h1>
+      </WrapItem>
+      <WrapItem>
         <a
           href="#about"
           onClick={() => handlePageChange("About")}

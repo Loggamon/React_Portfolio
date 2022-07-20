@@ -7,7 +7,7 @@ function Project(props) {
   return (
     <Wrap spacing="30px" justify="center">
       {props.projects.map((project) => (
-        <WrapItem flexDirection="column" key={project.id}>
+        <WrapItem flexDirection="column" alignItems="center" key={project.id}>
           <h5>{project.name}</h5>
           <img src={project.image} />
           <p>{project.description}</p>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Spacer } from "@chakra-ui/react";
 
 import Navigation from "../navigation/Navigation";
 import About from "../pages/About";
@@ -27,7 +27,7 @@ export default function PortfolioContainer() {
 
   return (
     <React.Fragment>
-      <Box bg="#0D0221" color="#C2E7D9">
+      <Flex h="100px" justifyContent="flex-end" align="center" bg="#0D0221" color="#C2E7D9">
         <header>
           <Navigation
             bg="#A6CFD5"
@@ -36,8 +36,8 @@ export default function PortfolioContainer() {
             handlePageChange={handlePageChange}
           />
         </header>
-      </Box>
-      <main>{renderPage()}</main>
+      </Flex>
+      <Box bg="lightblue">{renderPage()}</Box>
     </React.Fragment>
   );
 }

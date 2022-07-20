@@ -1,6 +1,8 @@
 import React from "react";
 import Project from "../project/Project";
 
+import { Box } from '@chakra-ui/react';
+
 const projects = [
   {
     id: 1,
@@ -31,10 +33,10 @@ const projects = [
 
 export default function Portfolio(props) {
   return (
-    <div>
+    <Box>
       <h1>My Projects</h1>
-      <p>This is where I wil be hosting my projects.</p>
+      <p>These are some of the projects I have worked on!</p>
       <Project projects={projects} />;
-    </div>
+    </Box>
   );
 }
