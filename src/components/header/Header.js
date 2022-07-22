@@ -39,6 +39,8 @@ export default function PortfolioContainer() {
         align="center"
         bg="#0D0221"
         color="#C2E7D9"
+        position="sticky"
+        top="0px"
       >
         <h1>Logan Monson</h1>
         <header>

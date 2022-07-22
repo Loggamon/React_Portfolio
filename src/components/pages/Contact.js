@@ -47,43 +47,47 @@ export default function Contact() {
   };
 
   return (
-    <Container>
+    <React.Fragment>
       <h1>Contact Me...</h1>
-      <p>This is where I will be linking my contact form.</p>
 
-      <form>
-        <SimpleGrid spacing="20px">
-          <input
-            value={name}
-            name="name"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="name"
-          />
-          <input
-            value={email}
-            name="email"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="email"
-          />
-          <input
-            value={message}
-            name="text"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="message"
-          />
-          <Button type="button" onClick={handleFormSubmit}>
-            Submit
-          </Button>
-        </SimpleGrid>
-      </form>
-      {errorMessage && (
-        <div>
-          <p>{errorMessage}</p>
-        </div>
-      )}
-    </Container>
+      <Container p="20px">
+      <p>Please fill out the form down below...</p>
+        <form>
+          <SimpleGrid spacing="20px">
+            <input
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="name"
+            />
+            <input
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="email"
+            />
+            <input
+              value={message}
+              name="text"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="message"
+            />
+            <Button type="button" onClick={handleFormSubmit}>
+              Submit
+            </Button>
+          </SimpleGrid>
+        </form>
+        {errorMessage && (
+          <div>
+            <p>{errorMessage}</p>
+          </div>
+        )}
+        <p>...and I will get back to you!</p>
+      </Container>
+
+    </React.Fragment>
   );
 }
