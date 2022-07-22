@@ -7,6 +7,11 @@ import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio";
 import Resume from "../pages/Resume";
 
+const background = {
+  header: require("../assets/5011.png"),
+  main: require("../assets/5013.png"),
+};
+
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("About");
 
@@ -27,7 +32,15 @@ export default function PortfolioContainer() {
 
   return (
     <React.Fragment>
-      <Flex h="100px" justifyContent="flex-end" align="center" bg="#0D0221" color="#C2E7D9">
+      <Flex
+        padding="20px"
+        h="100px"
+        justifyContent="space-between"
+        align="center"
+        bg="#0D0221"
+        color="#C2E7D9"
+      >
+        <h1>Logan Monson</h1>
         <header>
           <Navigation
             bg="#A6CFD5"
@@ -37,7 +50,7 @@ export default function PortfolioContainer() {
           />
         </header>
       </Flex>
-      <Box bg="lightblue">{renderPage()}</Box>
+      <Box backgroundImage={background.main}>{renderPage()}</Box>
     </React.Fragment>
   );
 }

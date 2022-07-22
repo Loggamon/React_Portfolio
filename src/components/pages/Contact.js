@@ -1,86 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from "../../utils/helpers";
+
+import { Container, SimpleGrid, Button } from "@chakra-ui/react";
 
 export default function Contact() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-    const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
-    const [message, setMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
-    const handleInputChange = (e) => {
+    if (inputType === "email") {
+      setEmail(inputValue);
+    } else if (inputType === "name") {
+      setName(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
 
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-        if (inputType === 'email') {
-            setEmail(inputValue);
-        } else if (inputType === 'name') {
-            setName(inputValue);
-        } else {
-            setMessage(inputValue);
-        }
-    };
+    if (!validateEmail(email)) {
+      setErrorMessage("Please enter a valid email");
+      return;
+    }
+    if (!name) {
+      setErrorMessage("Please leave a name");
+      return;
+    }
+    if (!message) {
+      setErrorMessage("Please leave a response");
+      return;
+    }
+    alert(`Thank you, ${name}!`);
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
 
-        if(!validateEmail(email)) {
-            setErrorMessage('Please enter a valid email');
-            return;
-        }
-        if(!name) {
-            setErrorMessage('Please leave a name');
-            return;
-        }
-        if(!message) {
-            setErrorMessage('Please leave a response');
-            return;
-        }
-        alert(`Thank you, ${name}!`)
+  return (
+    <Container>
+      <h1>Contact Me...</h1>
+      <p>This is where I will be linking my contact form.</p>
 
-        setEmail('');
-        setName('');
-        setMessage('');
-    };
-
-    return (
+      <form>
+        <SimpleGrid spacing="20px">
+          <input
+            value={name}
+            name="name"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="name"
+          />
+          <input
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="email"
+          />
+          <input
+            value={message}
+            name="text"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="message"
+          />
+          <Button type="button" onClick={handleFormSubmit}>
+            Submit
+          </Button>
+        </SimpleGrid>
+      </form>
+      {errorMessage && (
         <div>
-            <h1>Contact Me...</h1>
-            <p>
-                This is where I will be linking my contact form.
-            </p>
-            <form>
-                <input
-                    value={name}
-                    name="name"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="name"
-                />
-                <input
-                    value={email}
-                    name="email"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="email"
-                />
-                <input
-                    value={message}
-                    name="text"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="message"
-                />
-                <button type='button' onClick={handleFormSubmit}>Submit</button>
-            </form>
-            {errorMessage && (
-                <div>
-                    <p>{errorMessage}</p>
-                </div>
-            )}
+          <p>{errorMessage}</p>
         </div>
-    );
+      )}
+    </Container>
+  );
 }

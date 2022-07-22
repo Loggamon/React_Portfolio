@@ -4,10 +4,7 @@ import { Wrap, WrapItem, Box } from "@chakra-ui/react";
 function Navigation({ currentPage, handlePageChange }) {
   return (
     <Wrap>
-      <WrapItem>
-      <h1>Logan Monson</h1>
-      </WrapItem>
-      <WrapItem>
+      <WrapItem p="20px">
         <a
           href="#about"
           onClick={() => handlePageChange("About")}
@@ -16,7 +13,7 @@ function Navigation({ currentPage, handlePageChange }) {
           About
         </a>
       </WrapItem>
-      <WrapItem>
+      <WrapItem p="20px">
         <a
           href="#portfolio"
           onClick={() => handlePageChange("Portfolio")}
@@ -27,7 +24,7 @@ function Navigation({ currentPage, handlePageChange }) {
           Portfolio
         </a>
       </WrapItem>
-      <WrapItem>
+      <WrapItem p="20px">
         <a
           href="#contact"
           onClick={() => handlePageChange("Contact")}
@@ -36,7 +33,7 @@ function Navigation({ currentPage, handlePageChange }) {
           Contact
         </a>
       </WrapItem>
-      <WrapItem>
+      <WrapItem p="20px">
         <a
           href="#resume"
           onClick={() => handlePageChange("Resume")}

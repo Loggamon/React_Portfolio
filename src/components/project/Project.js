@@ -9,7 +9,9 @@ function Project(props) {
       {props.projects.map((project) => (
         <WrapItem flexDirection="column" alignItems="center" key={project.id}>
           <h5>{project.name}</h5>
-          <img src={project.image} />
+          <a href={project.url} target="_blank" rel="noreferrer">
+            <img src={project.image} alt="An animation of the project" />
+          </a>
           <p>{project.description}</p>
         </WrapItem>
       ))}

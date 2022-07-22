@@ -1,10 +1,16 @@
 import React from "react";
-import { Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+
+const profileImg = {
+  source: require("../assets/ProfilePic.jpg"),
+  description: "Logan Monson's profile",
+};
 
 export default function About() {
   return (
-    <Container maxW="container.sm">
+    <Box>
       <h1>About me</h1>
+      <img src={profileImg.source} alt={profileImg.description} />
       <p>This is where I will be talking about who I am and what i do.</p>
       <p>Hi!</p>
       <p>
@@ -20,6 +26,6 @@ export default function About() {
         I love to write music, play videogames, and play tabletop games with my
         friends!
       </p>
-    </Container>
+    </Box>
   );
 }
