@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { validateEmail } from "../../utils/helpers";
 
-import { Container, SimpleGrid, Button } from "@chakra-ui/react";
+import { Container, Text, SimpleGrid, Button } from "@chakra-ui/react";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -48,10 +48,12 @@ export default function Contact() {
 
   return (
     <React.Fragment>
-      <h1>Contact Me...</h1>
+      <Text fontSize="50px">
+        <h1>Contact Me...</h1>
+      </Text>
 
       <Container p="20px">
-      <p>Please fill out the form down below...</p>
+        <p>Please fill out the form down below...</p>
         <form>
           <SimpleGrid spacing="20px">
             <input
@@ -74,6 +76,7 @@ export default function Contact() {
               onChange={handleInputChange}
               type="text"
               placeholder="message"
+              rows={10}
             />
             <Button type="button" onClick={handleFormSubmit}>
               Submit
@@ -87,7 +90,6 @@ export default function Contact() {
         )}
         <p>...and I will get back to you!</p>
       </Container>
-
     </React.Fragment>
   );
 }

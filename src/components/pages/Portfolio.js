@@ -7,8 +7,7 @@ const projects = [
   {
     id: 1,
     name: "J.A.T.E. PWA",
-    description:
-      "A text-editor application that you can also download to you desktop!",
+    description: "A text-editor progressive web app, for desktop!",
     image: require("../assets/JATEPWA.gif"),
     url: "https://loggamons-text-editor.herokuapp.com/",
   },
