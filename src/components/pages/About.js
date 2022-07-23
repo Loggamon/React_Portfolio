@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
 
 const profileImg = {
   source: require("../assets/ProfilePic.png"),
@@ -14,32 +14,38 @@ export default function About() {
           About me
         </h1>
       </Text>
-      <Flex alignItems="center" justify="space-around">
-        <img
-          p="20px"
-          height="100px"
-          width="500px"
+      <Flex alignItems="center">
+        <Image
+          boxSize={500}
           src={profileImg.source}
           alt={profileImg.description}
         />
-        <div padding="20px" direction="column">
-          <p>This is where I will be talking about who I am and what i do.</p>
+
+        <Box m="10px" p="20px" direction="column">
           <p>Hi!</p>
           <p>
             My name Is Logan Monson; I'm a Seattle-based barista that has
             decided to step into the world of coding!
           </p>
           <p>
-            I started learning about fullstack development in 2022, and have
-            created applications that have used Mongo, MySQL, and React; as well
-            as designing Progressive Web Applications and express-driven
-            programs.
+            I am currently enrolled at the University of Washington, studying to
+            become a FullStack-Developer. I have created applications that have
+            used Mongo, MySQL, and React; as well as designing Progressive Web
+            Applications and express-driven programs. My skills include;
           </p>
+          <ul>
+            <li>JavaScript, HTML, and CSS Stylings</li>
+            <li>Node</li>
+            <li>MySQL, NoSQL</li>
+            <li>MongoDB</li>
+            <li>GraphQL</li>
+            <li>and React!</li>
+          </ul>
           <p>
-            I love to write music, play videogames, and play tabletop games with
-            my friends!
+            I love to write music, problem-solve, play videogames, and play
+            tabletop games with my friends!
           </p>
-        </div>
+        </Box>
       </Flex>
     </Box>
   );

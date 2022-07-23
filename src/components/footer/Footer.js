@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <Wrap
       flexDirection="row"
-      flexShrink="0"
+      // flexShrink="0"
       bg="#0D0221"
       color="#C2E7D9"
       justify="center"
