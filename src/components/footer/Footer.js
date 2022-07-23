@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import "../footer/footer.css";
 
 const appColors = {
   github: "green",
@@ -35,11 +36,12 @@ export default function Footer() {
   }
   return (
     <Wrap
-      flexDirection="row"
-      // flexShrink="0"
-      bg="#0D0221"
-      color="#C2E7D9"
-      justify="center"
+      className="footer"
+      // flexDirection="row"
+      // // flexShrink="0"
+      // bg="#0D0221"
+      // color="#C2E7D9"
+      // justify="center"
     >
       <WrapItem p="20px">
         <a href="https://github.com/Loggamon" target="_blank" rel="noreferrer">

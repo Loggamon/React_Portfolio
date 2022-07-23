@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
 
 import {
+  Box,
   Container,
   Text,
   SimpleGrid,
@@ -53,12 +54,12 @@ export default function Contact() {
   };
 
   return (
-    <React.Fragment>
+    <Box height="80vh">
       <Text fontSize="50px">
         <h1>Contact Me...</h1>
       </Text>
 
-      <Container p="20px">
+      <Container p="20px" align="center">
         <p>Please fill out the form down below...</p>
         <form>
           <SimpleGrid spacing="20px">
@@ -86,7 +87,13 @@ export default function Contact() {
               placeholder="message"
               variant="filled"
             />
-            <Button type="button" onClick={handleFormSubmit}>
+            <Button
+              bg="#0d0221"
+              color="#c2e7d9"
+              _hover={{ bg: "#c2e7d9", color: "#0d0221" }}
+              type="button"
+              onClick={handleFormSubmit}
+            >
               Submit
             </Button>
           </SimpleGrid>
@@ -98,6 +105,6 @@ export default function Contact() {
         )}
         <p>...and I will get back to you!</p>
       </Container>
-    </React.Fragment>
+    </Box>
   );
 }

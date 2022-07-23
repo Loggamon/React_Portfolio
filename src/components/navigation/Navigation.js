@@ -53,10 +53,13 @@ function Navigation({ currentPage, handlePageChange }) {
       </WrapItem>
       <WrapItem p="20px">
         <a
-          href="#resume"
+          href="https://docs.google.com/document/d/1Av1A8wJ00ZBa_Jz-xChkAiVl_xn5x83XWSLQch_lWpo"
+          target="_blank"
+          rel="noreferrer"
           onMouseOver={MouseOverNav}
           onMouseLeave={MouseLeaveNav}
-          onClick={() => handlePageChange("Resume")}
+          // onClick={() => handlePageChange("Resume")}
+
           className={currentPage === "Resume" ? "nav-link active" : "nav-link"}
         >
           Resume

@@ -1,0 +1,14 @@
+.header {
+  padding: 20px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0221;
+  color: #c2e7d9;
+  position: sticky;
+  top: 0px;
+}
+.navigation {
+  background-color: #a6cfd5;
+  color: #0d0221;
+}
