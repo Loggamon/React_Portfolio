@@ -2,6 +2,7 @@ import React from "react";
 import Project from "../project/Project";
 
 import { Box, Text } from "@chakra-ui/react";
+import "../pages/pageStyles/pageStyles.css";
 
 const projects = [
   {
@@ -41,11 +42,13 @@ const projects = [
 export default function Portfolio(props) {
   return (
     <Box>
-      <Text fontSize="50px">
-        <h1>My Projects</h1>
+      <Text>
+        <h1 className="heading">My Projects</h1>
       </Text>
-      <p>These are some of the projects I have worked on!</p>
-      <Project projects={projects} />;
+      <Box className="section">
+        <p>These are some of the projects I have worked on!</p>
+        <Project projects={projects} />;
+      </Box> 
     </Box>
   );
 }

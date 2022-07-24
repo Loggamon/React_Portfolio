@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Text, Flex, Image, Container } from "@chakra-ui/react";
+import "../pages/pageStyles/pageStyles.css";
 
 const profileImg = {
   source: require("../assets/ProfilePic.png"),
@@ -9,24 +10,24 @@ const profileImg = {
 export default function About() {
   return (
     <Box>
-      <Text fontSize="50px">
-        <h1 m="20px" fontSize="50px">
-          About me
+      <Text>
+        <h1 className="heading">
+          About Me
         </h1>
       </Text>
-      <Flex p="20px" align="center" justify="space-between">
-        <Image
-          boxSize={500}
+      <Flex className="headingTwo">
+        <Image className="profile"
+
           src={profileImg.source}
           alt={profileImg.description}
         />
         <Box flex="1">
-          <Text align="center" fontSize="6xl">
+          <Text align="center">
             Hi! Nice to meet you!
           </Text>
         </Box>
       </Flex>
-      <Box p="40px" direction="column">
+      <Box className="section">
         <p>
           My name Is Logan Monson; I'm a Seattle-based barista that has decided
           to step into the world of coding!

@@ -10,6 +10,7 @@ import {
   Button,
   Textarea,
 } from "@chakra-ui/react";
+import "../pages/pageStyles/pageStyles.css";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -54,9 +55,9 @@ export default function Contact() {
   };
 
   return (
-    <Box height="80vh">
-      <Text fontSize="50px">
-        <h1>Contact Me...</h1>
+    <Box>
+      <Text className="heading">
+        <h1>Contact Me</h1>
       </Text>
 
       <Container p="20px" align="center">

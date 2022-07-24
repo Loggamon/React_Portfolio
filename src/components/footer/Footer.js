@@ -71,7 +71,7 @@ export default function Footer() {
       </WrapItem>
       <WrapItem p="20px">
         <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://github.com/Loggamon"
           target="_blank"
           rel="noreferrer"
         >

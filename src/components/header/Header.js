@@ -43,7 +43,7 @@ export default function PortfolioContainer() {
         // top="0px"
       >
         <h1>Logan Monson</h1>
-        <header>
+        <header className="navbox">
           <Navigation
             className="navigation"
             // bg="#A6CFD5"

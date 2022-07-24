@@ -12,3 +12,15 @@
   background-color: #a6cfd5;
   color: #0d0221;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 150px;
+
+
+  }
+
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
+import "../navigation/navigation.css"
 
 function Navigation({ currentPage, handlePageChange }) {
   function MouseOverNav(e) {
@@ -16,7 +17,7 @@ function Navigation({ currentPage, handlePageChange }) {
   }
   return (
     <Wrap>
-      <WrapItem p="20px">
+      <WrapItem className="wrapper">
         <a
           href="#about"
           onMouseOver={MouseOverNav}
@@ -27,7 +28,7 @@ function Navigation({ currentPage, handlePageChange }) {
           About
         </a>
       </WrapItem>
-      <WrapItem p="20px">
+      <WrapItem className="wrapper">
         <a
           href="#portfolio"
           onMouseOver={MouseOverNav}
@@ -40,7 +41,7 @@ function Navigation({ currentPage, handlePageChange }) {
           Portfolio
         </a>
       </WrapItem>
-      <WrapItem p="20px">
+      <WrapItem className="wrapper">
         <a
           href="#contact"
           onMouseOver={MouseOverNav}
@@ -51,7 +52,7 @@ function Navigation({ currentPage, handlePageChange }) {
           Contact
         </a>
       </WrapItem>
-      <WrapItem p="20px">
+      <WrapItem className="wrapper">
         <a
           href="https://docs.google.com/document/d/1Av1A8wJ00ZBa_Jz-xChkAiVl_xn5x83XWSLQch_lWpo"
           target="_blank"
