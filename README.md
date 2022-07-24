@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Logan's React Portfolio  
+![License](https://img.shields.io/badge/license-MIT_License-reg.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![Demonstration of Portfolio.](./Assets/ReactPortfolio.png)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Why did you decide to build this project?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+````
+Now that I have practiced writing React applications, I wanted to update my portfolio with React components so I can show off my capabilities to future employers!
+````
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+How to install:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
+In order to install this project, they would simply need to install the SSN code from the git repository at the root of their new directory in their local machine!
+````
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+How does your project work?
 
-### `npm run eject`
+````
+My portfolio is powered by React; a system that allows the webpage to refresh modularly; rather than having the browser update the entire page for every change/query made, React allows the DOM to upate itslf in smaller chunks, allowing to faster responses and load-times.
+````
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+How can you contribute to this project?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+````
+The Portfolio has a 'contact' page! If you have any thoughts or critiques about the code, feel free to write them there!
+````
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tests
 
-## Learn More
+To run this program:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+````
+I have a function that allows hover elements to occur depending on what element you cursor over:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+function MouseOver(e) {
+    if (e.target.id === "github") {
+      e.target.style.color = appColors.github;
+      e.target.style.transition = ".3s";
+      e.target.style.transform = "scale(1.2)";
+    } else if (e.target.id === "linkedIn") {
+      e.target.style.color = appColors.linkedin;
+      e.target.style.transition = ".3s";
+      e.target.style.transform = "scale(1.2)";
+    } else if (e.target.id === "youtube") {
+      e.target.style.color = appColors.youtube;
+      e.target.style.transition = ".3s";
+      e.target.style.transform = "scale(1.2)";
+    }
+  }
+  function MouseLeave(e) {
+    e.target.style.color = "";
+    e.target.style.transition = ".2s";
+    e.target.style.transform = "scale(1)";
+  }
 
-### Code Splitting
+Since React doesn't like 'hover' styles in-line, I had to resort to 'mouseOver' and 'mouseLeave' methods!
+````
+![Some of the code used in this application.](./Assets/ReactPortfolioCode.png)
+Youn access the application [here!](https://loggamon.github.io/my-react-portfolio/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Questions
 
-### Analyzing the Bundle Size
+If you have any questions, you can contact me through:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Github](https://github.com/Loggamon)
+- Email: scarletfedora@gmail.com
 
-### Making a Progressive Web App
+## License & Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© Logan Monson

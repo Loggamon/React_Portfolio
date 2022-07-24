@@ -37,11 +37,6 @@ export default function Footer() {
   return (
     <Wrap
       className="footer"
-      // flexDirection="row"
-      // // flexShrink="0"
-      // bg="#0D0221"
-      // color="#C2E7D9"
-      // justify="center"
     >
       <WrapItem p="20px">
         <a href="https://github.com/Loggamon" target="_blank" rel="noreferrer">
