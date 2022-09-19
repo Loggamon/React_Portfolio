@@ -68,6 +68,7 @@ export default function Contact() {
               value={name}
               name="name"
               onChange={handleInputChange}
+              id="name"
               type="text"
               placeholder="name"
               variant="filled"
@@ -77,6 +78,7 @@ export default function Contact() {
               name="email"
               onChange={handleInputChange}
               type="text"
+              id="email"
               placeholder="email"
               variant="filled"
             />
@@ -85,6 +87,7 @@ export default function Contact() {
               name="text"
               onChange={handleInputChange}
               type="text"
+              id="message"
               placeholder="message"
               variant="filled"
             />
@@ -93,6 +96,7 @@ export default function Contact() {
               color="#c2e7d9"
               _hover={{ bg: "#c2e7d9", color: "#0d0221" }}
               type="button"
+              id="emailButton"
               onClick={handleFormSubmit}
             >
               Submit
