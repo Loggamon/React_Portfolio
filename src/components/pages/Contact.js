@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import { validateEmail } from "../../utils/helpers";
 
@@ -13,6 +14,8 @@ import {
 import "../pages/pageStyles/pageStyles.css";
 
 export default function Contact() {
+  const form = useRef();
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -47,6 +50,24 @@ export default function Contact() {
       setErrorMessage("Please leave a response");
       return;
     }
+
+    emailjs
+      .sendForm(
+        "service_yspira8",
+        "template_6swzpt9",
+        form.current,
+        "30osIDRqP6-cv7gFe"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("SENT!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     alert(`Thank you, ${name}!`);
 
     setEmail("");
@@ -61,8 +82,8 @@ export default function Contact() {
       </Text>
 
       <Container p="20px" align="center">
-        <p>Please fill out the form down below...</p>
-        <form>
+        <span>Please fill out the form down below...</span>
+        <form ref={form}>
           <SimpleGrid spacing="20px">
             <Textarea
               value={name}
@@ -77,7 +98,7 @@ export default function Contact() {
               value={email}
               name="email"
               onChange={handleInputChange}
-              type="text"
+              type="email"
               id="email"
               placeholder="email"
               variant="filled"
@@ -95,8 +116,9 @@ export default function Contact() {
               bg="#0d0221"
               color="#c2e7d9"
               _hover={{ bg: "#c2e7d9", color: "#0d0221" }}
-              type="button"
+              type="submit"
               id="emailButton"
+              value="Send"
               onClick={handleFormSubmit}
             >
               Submit
