@@ -65,14 +65,18 @@ export default function Contact() {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
+
+        setEmail("");
+        setName("");
+        setMessage("");
       );
 
     alert(`Thank you, ${name}!`);
 
-    setEmail("");
-    setName("");
-    setMessage("");
+    // setEmail("");
+    // setName("");
+    // setMessage("");
   };
 
   return (
