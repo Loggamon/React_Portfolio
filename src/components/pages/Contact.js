@@ -67,9 +67,9 @@ export default function Contact() {
           console.log(error.text);
         },
 
-        setEmail("");
-        setName("");
-        setMessage("");
+        // setEmail("");
+        // setName("");
+        // setMessage("");
       );
 
     alert(`Thank you, ${name}!`);
