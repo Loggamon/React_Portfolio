@@ -51,33 +51,59 @@ export default function Contact() {
       return;
     }
 
-    emailjs
-      .sendForm(
-        "service_yspira8",
-        "template_6swzpt9",
-        form.current,
-        "30osIDRqP6-cv7gFe"
-      )
-      .then(
-        (result) => {
-          console.log(result.status, result.text);
-          console.log("SENT!");
-          alert(`Thank you, ${name}!`);
-        },
-        (error) => {
-          console.log(error.text);
-        },
+    // emailjs
+    //   .sendForm(
+    //     "service_yspira8",
+    //     "template_6swzpt9",
+    //     form.current,
+    //     "30osIDRqP6-cv7gFe"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.status, result.text);
+    //       console.log("SENT!");
+    //       alert(`Thank you, ${name}!`);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     },
 
-        // setEmail("");
-        // setName("");
-        // setMessage("");
-      );
+    //     // setEmail("");
+    //     // setName("");
+    //     // setMessage("");
+    //   );
 
     // alert(`Thank you, ${name}!`);
 
     setEmail("");
     setName("");
     setMessage("");
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm(
+      "service_yspira8",
+      "template_6swzpt9",
+      form.current,
+      "30osIDRqP6-cv7gFe"
+    )
+    .then(
+      (result) => {
+        console.log(result.status, result.text);
+        console.log("SENT!");
+        alert(`Thank you, ${name}!`);
+      },
+      (error) => {
+        console.log(error.text);
+      },
+
+      // setEmail("");
+      // setName("");
+      // setMessage("");
+    );
   };
 
   return (
@@ -124,7 +150,7 @@ export default function Contact() {
               type="submit"
               id="emailButton"
               value="Send"
-              // onClick={handleFormSubmit}
+              onClick={sendEmail}
             >
               Submit
             </Button>
