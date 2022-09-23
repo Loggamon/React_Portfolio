@@ -74,9 +74,9 @@ export default function Contact() {
 
     alert(`Thank you, ${name}!`);
 
-    setEmail("");
-    setName("");
-    setMessage("");
+    // setEmail("");
+    // setName("");
+    // setMessage("");
   };
 
   return (
