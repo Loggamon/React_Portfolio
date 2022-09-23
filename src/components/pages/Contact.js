@@ -51,59 +51,33 @@ export default function Contact() {
       return;
     }
 
-    // emailjs
-    //   .sendForm(
-    //     "service_yspira8",
-    //     "template_6swzpt9",
-    //     form.current,
-    //     "30osIDRqP6-cv7gFe"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.status, result.text);
-    //       console.log("SENT!");
-    //       alert(`Thank you, ${name}!`);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     },
+    emailjs
+      .sendForm(
+        "service_yspira8",
+        "template_6swzpt9",
+        form.current,
+        "30osIDRqP6-cv7gFe"
+      )
+      .then(
+        (result) => {
+          console.log(result.status, result.text);
+          console.log("SENT!");
+          alert(`Thank you, ${name}!`);
+        },
+        (error) => {
+          console.log(error.text);
+        },
 
-    //     // setEmail("");
-    //     // setName("");
-    //     // setMessage("");
-    //   );
+        // setEmail("");
+        // setName("");
+        // setMessage("");
+      );
 
     // alert(`Thank you, ${name}!`);
 
     setEmail("");
     setName("");
     setMessage("");
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-    .sendForm(
-      "service_yspira8",
-      "template_6swzpt9",
-      form.current,
-      "30osIDRqP6-cv7gFe"
-    )
-    .then(
-      (result) => {
-        console.log(result.status, result.text);
-        console.log("SENT!");
-        alert(`Thank you, ${name}!`);
-      },
-      (error) => {
-        console.log(error.text);
-      },
-
-      // setEmail("");
-      // setName("");
-      // setMessage("");
-    );
   };
 
   return (
@@ -114,7 +88,7 @@ export default function Contact() {
 
       <Container p="20px" align="center">
         <span>Please fill out the form down below...</span>
-        <form ref={form} onSubmit={handleFormSubmit}>
+        <form ref={form}>
           <SimpleGrid spacing="20px">
             <Textarea
               value={name}
@@ -150,7 +124,7 @@ export default function Contact() {
               type="submit"
               id="emailButton"
               value="Send"
-              onClick={sendEmail}
+              onClick={handleFormSubmit}
             >
               Submit
             </Button>
