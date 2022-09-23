@@ -60,8 +60,9 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result.status, result.text);
           console.log("SENT!");
+          alert(`Thank you, ${name}!`);
         },
         (error) => {
           console.log(error.text);
@@ -72,7 +73,7 @@ export default function Contact() {
         // setMessage("");
       );
 
-    alert(`Thank you, ${name}!`);
+    // alert(`Thank you, ${name}!`);
 
     setEmail("");
     setName("");
@@ -87,7 +88,7 @@ export default function Contact() {
 
       <Container p="20px" align="center">
         <span>Please fill out the form down below...</span>
-        <form ref={form}>
+        <form ref={form} onSubmit={handleFormSubmit}>
           <SimpleGrid spacing="20px">
             <Textarea
               value={name}
@@ -123,7 +124,7 @@ export default function Contact() {
               type="submit"
               id="emailButton"
               value="Send"
-              onClick={handleFormSubmit}
+              // onClick={handleFormSubmit}
             >
               Submit
             </Button>
