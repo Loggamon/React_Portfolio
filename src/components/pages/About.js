@@ -11,20 +11,16 @@ export default function About() {
   return (
     <Box>
       <Text>
-        <h1 className="heading">
-          About Me
-        </h1>
+        <h1 className="heading">About Me</h1>
       </Text>
       <Flex className="headingTwo">
-        <Image className="profile"
-
+        <Image
+          className="profile"
           src={profileImg.source}
           alt={profileImg.description}
         />
         <Box flex="1">
-          <Text align="center">
-            Hi! Nice to meet you!
-          </Text>
+          <Text align="center">Hi! Nice to meet you!</Text>
         </Box>
       </Flex>
       <Box className="section">
@@ -51,8 +47,8 @@ export default function About() {
           <br></br>
         </Container>
         <p>
-          I love to write music, problem-solve, play videogames, and play
-          tabletop games with my friends!
+          My hobbies include writing music, solving puzzles, playing videogames,
+          and participating in tabletop games with my friends!
         </p>
       </Box>
     </Box>

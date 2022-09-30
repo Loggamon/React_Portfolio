@@ -31,23 +31,11 @@ export default function PortfolioContainer() {
 
   return (
     <React.Fragment>
-      <Flex
-        className="header"
-        // padding="20px"
-        // h="100px"
-        // justifyContent="space-between"
-        // align="center"
-        // bg="#0D0221"
-        // color="#C2E7D9"
-        // position="sticky"
-        // top="0px"
-      >
+      <Flex className="header">
         <h1>Logan Monson</h1>
         <header className="navbox">
           <Navigation
             className="navigation"
-            // bg="#A6CFD5"
-            // color="#0D0221"
             currentPage={currentPage}
             handlePageChange={handlePageChange}
           />

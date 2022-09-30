@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
-import "../navigation/navigation.css"
+import "../navigation/navigation.css";
 
 function Navigation({ currentPage, handlePageChange }) {
   function MouseOverNav(e) {
@@ -54,13 +54,11 @@ function Navigation({ currentPage, handlePageChange }) {
       </WrapItem>
       <WrapItem className="wrapper">
         <a
-          href="https://docs.google.com/document/d/1Av1A8wJ00ZBa_Jz-xChkAiVl_xn5x83XWSLQch_lWpo"
+          href="https://docs.google.com/document/d/1Av1A8wJ00ZBa_Jz-xChkAiVl_xn5x83XWSLQch_lWpo/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
           onMouseOver={MouseOverNav}
           onMouseLeave={MouseLeaveNav}
-          // onClick={() => handlePageChange("Resume")}
-
           className={currentPage === "Resume" ? "nav-link active" : "nav-link"}
         >
           Resume

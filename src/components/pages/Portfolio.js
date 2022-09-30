@@ -47,8 +47,8 @@ export default function Portfolio(props) {
       </Text>
       <Box className="section">
         <p>These are some of the projects I have worked on!</p>
-        <Project projects={projects} />;
-      </Box> 
+        <Project projects={projects} />
+      </Box>
     </Box>
   );
 }
