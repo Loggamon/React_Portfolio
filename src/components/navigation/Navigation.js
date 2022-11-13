@@ -54,7 +54,7 @@ function Navigation({ currentPage, handlePageChange }) {
       </WrapItem>
       <WrapItem className="wrapper">
         <a
-          href="https://docs.google.com/document/d/1Av1A8wJ00ZBa_Jz-xChkAiVl_xn5x83XWSLQch_lWpo/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1V2BQ-XZDMoU0LL5cbFCP0Ng9m6OArVc41NRnDj8RZWw/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
           onMouseOver={MouseOverNav}
